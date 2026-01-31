@@ -22,6 +22,7 @@ public abstract class TileBase : MonoBehaviour
         Cold,
         Water,
         Earth,
+        None,
     }
 
     public List<Tag> Tags = new();
@@ -29,6 +30,23 @@ public abstract class TileBase : MonoBehaviour
     public abstract void Heat();
 
     public abstract void Freeze();
+
+    public void SetVisible(bool visible)
+    {
+        var renderers = GetComponentsInChildren<Renderer>();
+        foreach (var renderer in renderers)
+        {
+            renderer.enabled = visible;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (Tags.Contains(MaskController.Instance.currentElement))
+        {
+            SetVisible(false);
+        }
+    }
 
     public void Change(TileType type)
     {

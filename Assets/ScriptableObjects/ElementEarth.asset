@@ -17,3 +17,4 @@ MonoBehaviour:
   Icon: {fileID: -1605707320451941170, guid: 24d0346cf588b9749b82ce0bff21500d, type: 3}
   PickupSprite: {fileID: 0}
   stonePrefab: {fileID: 9142218808033841944, guid: b1b00851b4886d446b64e81ab8cebcde, type: 3}
+  overlayColor: {r: 0.5450981, g: 0.2705882, b: 0.07450981, a: 0.11764706}

@@ -8,4 +8,5 @@ public class Element : ScriptableObject
     public Sprite Icon;
     public Sprite PickupSprite;
     public GameObject stonePrefab;
+    public Color overlayColor;
 }

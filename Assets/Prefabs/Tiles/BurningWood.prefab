@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 136543427572812020}
   - component: {fileID: 2908565955654313482}
   m_Layer: 0
-  m_Name: WoodBurning
+  m_Name: BurningWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
