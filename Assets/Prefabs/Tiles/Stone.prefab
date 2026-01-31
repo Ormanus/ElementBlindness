@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2174985381654624230}
   - component: {fileID: 801862305287673343}
   m_Layer: 0
-  m_Name: TileStone
+  m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

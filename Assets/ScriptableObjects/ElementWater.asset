@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Element
   Name: Water
   Type: 2
+  Icon: {fileID: -8868248462342347919, guid: 24d0346cf588b9749b82ce0bff21500d, type: 3}
+  PickupSprite: {fileID: 0}
   stonePrefab: {fileID: 9142218808033841944, guid: 4162ab190d1d3f14eb529d6ffd03a3d8, type: 3}

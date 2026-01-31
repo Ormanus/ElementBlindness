@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Element
   Name: Earth
   Type: 3
+  Icon: {fileID: -1605707320451941170, guid: 24d0346cf588b9749b82ce0bff21500d, type: 3}
+  PickupSprite: {fileID: 0}
   stonePrefab: {fileID: 9142218808033841944, guid: b1b00851b4886d446b64e81ab8cebcde, type: 3}

@@ -19,4 +19,12 @@ public class TileWater : TileLiquid
     {
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
