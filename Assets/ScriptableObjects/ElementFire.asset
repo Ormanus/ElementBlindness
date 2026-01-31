@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ElementFire
   m_EditorClassIdentifier: Assembly-CSharp::Element
   Name: Fire
-  Type: 1
+  Type: 0
   stonePrefab: {fileID: 9142218808033841944, guid: 565f2444a347d1d488756f46e604eb86, type: 3}

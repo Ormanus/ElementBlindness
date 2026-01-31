@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1123949587087010168}
   - component: {fileID: 2725861007900850488}
   - component: {fileID: 6308857163582909684}
-  - component: {fileID: 3947421999392645690}
-  - component: {fileID: -7789272983419123018}
+  - component: {fileID: -9074765006128608183}
+  - component: {fileID: 7132076812813790476}
   m_Layer: 6
-  m_Name: ElementStoneWater
+  m_Name: ElementStoneCold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.1
---- !u!114 &3947421999392645690
+--- !u!114 &-9074765006128608183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,11 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9142218808033841944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f45ba24267ea5b4eb7aba91046858b9, type: 3}
+  m_Script: {fileID: 11500000, guid: c7850347718a9cf498f9f3af326ecd4a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StoneWater
-  ElementObject: {fileID: 11400000, guid: b865c643a72168f428b2ed791a02cce6, type: 2}
---- !u!212 &-7789272983419123018
+  m_EditorClassIdentifier: Assembly-CSharp::StoneCold
+  ElementObject: {fileID: 11400000, guid: 78a48bf56b28a594195ffcaaefea4c3b, type: 2}
+--- !u!212 &7132076812813790476
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
@@ -160,12 +160,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8868248462342347919, guid: 24d0346cf588b9749b82ce0bff21500d, type: 3}
+  m_Sprite: {fileID: 6898035379108858973, guid: 24d0346cf588b9749b82ce0bff21500d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2578125, y: 0.1640625}
+  m_Size: {x: 0.203125, y: 0.21875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

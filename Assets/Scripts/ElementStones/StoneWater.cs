@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class StoneWater : ElementStoneBase
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Effect(TileBase tile)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Effect(tile);
+        Vector2 rounded = (Vector2)Vector2Int.RoundToInt(transform.position);
+        TileBase.SpawnLiquid(TileBase.TileType.Water, rounded);
     }
 }

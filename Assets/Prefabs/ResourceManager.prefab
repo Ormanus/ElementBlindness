@@ -45,6 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceManager
   gameObjects:
-  - {fileID: 3975201470482483973, guid: d2a429b845bbde64bbb67e66299e1251, type: 3}
+  - {fileID: 2411077682593251812, guid: b223eb1c1e397b44ba82cfd640d932c1, type: 3}
+  - {fileID: 630750337864739575, guid: cb9a2fd971ba13748ab763d0fecf18c8, type: 3}
   - {fileID: 2037559494688800394, guid: aa5a9e6f14e595a478437c8a5357c175, type: 3}
+  - {fileID: 8219399290256773914, guid: a4b826752f50ae943b2202bab86f3ae7, type: 3}
   - {fileID: 8181188595095711363, guid: be9fa4e90f02b044cbbd2ad9b55739c8, type: 3}
+  - {fileID: 3975201470482483973, guid: d2a429b845bbde64bbb67e66299e1251, type: 3}
+  - {fileID: 8181188595095711363, guid: b2ad5f5da1710fb48965d93d75c4f7d4, type: 3}
+  - {fileID: 2037559494688800394, guid: 16ccbb99e3453df4aac8c84c83a46f1f, type: 3}
+  - {fileID: 2037559494688800394, guid: 7ed7c0fe6fb86b341b1f4ea66c7d5e55, type: 3}
+  - {fileID: 9142218808033841944, guid: 2c657dae61795e14294c5e511d7d1058, type: 3}
+  - {fileID: 9142218808033841944, guid: b1b00851b4886d446b64e81ab8cebcde, type: 3}
+  - {fileID: 9142218808033841944, guid: 565f2444a347d1d488756f46e604eb86, type: 3}
+  - {fileID: 9142218808033841944, guid: 4162ab190d1d3f14eb529d6ffd03a3d8, type: 3}

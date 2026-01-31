@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 511e469c856a58b43ab1d79e0fbd13e1, type: 3}
-  m_Name: ElementWater
+  m_Name: ElementCold
   m_EditorClassIdentifier: Assembly-CSharp::Element
-  Name: Water
-  Type: 2
-  stonePrefab: {fileID: 9142218808033841944, guid: 4162ab190d1d3f14eb529d6ffd03a3d8, type: 3}
+  Name: Cold
+  Type: 1
+  stonePrefab: {fileID: 9142218808033841944, guid: 565f2444a347d1d488756f46e604eb86, type: 3}

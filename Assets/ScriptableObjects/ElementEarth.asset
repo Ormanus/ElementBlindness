@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511e469c856a58b43ab1d79e0fbd13e1, type: 3}
   m_Name: ElementEarth
   m_EditorClassIdentifier: Assembly-CSharp::Element
-  Name: Fire
-  Type: 1
+  Name: Earth
+  Type: 3
   stonePrefab: {fileID: 9142218808033841944, guid: b1b00851b4886d446b64e81ab8cebcde, type: 3}

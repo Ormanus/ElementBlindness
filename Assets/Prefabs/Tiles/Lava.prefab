@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1361057462791328973}
   - component: {fileID: 1625183303427192907}
   - component: {fileID: 2220845439197387778}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

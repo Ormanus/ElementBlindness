@@ -3,15 +3,20 @@ using UnityEngine;
 public class ElementStoneBase : MonoBehaviour
 {
     public Element ElementObject;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.layer is 0 or 4) // Default or Water
+        {
+            if (collision.gameObject.TryGetComponent<TileBase>(out var tile))
+            {
+                Effect(tile);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Effect(TileBase tile)
     {
-        
+        Destroy(gameObject);
     }
 }

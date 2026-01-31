@@ -21,6 +21,7 @@ public abstract class TileBase : MonoBehaviour
         Hot,
         Cold,
         Water,
+        Earth,
     }
 
     public List<Tag> Tags = new();
@@ -31,16 +32,27 @@ public abstract class TileBase : MonoBehaviour
 
     public void Change(TileType type)
     {
-        var newTile = ResourceManager.Get<GameObject>(type.ToString());
-        if (newTile != null)
-            Instantiate(newTile, transform.position, transform.rotation, null);
+        SpawnTile(type, transform.position);
         Destroy(gameObject);
     }
 
     public void ChangeToLiquid(TileType type)
     {
+        SpawnLiquid(type, transform.position);
+        Destroy(gameObject);
+    }
+
+    public static void SpawnTile(TileType type, Vector2 position)
+    {
+        var newTile = ResourceManager.Get<GameObject>(type.ToString());
+        if (newTile != null)
+            Instantiate(newTile, position, Quaternion.identity, null);
+    }
+
+    public static void SpawnLiquid(TileType type, Vector2 position)
+    {
         var prefab = ResourceManager.Get<GameObject>(type.ToString());
-        Vector3 pos = transform.position;
+        Vector3 pos = position;
         pos += new Vector3(-0.5f, -0.5f);
         const int pieces = 4; // per dimension
         float step = 1f / pieces;
@@ -54,6 +66,5 @@ public abstract class TileBase : MonoBehaviour
                 obj.transform.position = pos + offset + new Vector3(i * step, j * step, 0f);
             }
         }
-        Destroy(gameObject);
     }
 }

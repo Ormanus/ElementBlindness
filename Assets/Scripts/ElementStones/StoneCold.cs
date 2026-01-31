@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class StoneFire : ElementStoneBase
+public class StoneCold : ElementStoneBase
 {
     protected override void Effect(TileBase tile)
     {
-        tile.Heat();
+        tile.Freeze();
         base.Effect(tile);
     }
 }
