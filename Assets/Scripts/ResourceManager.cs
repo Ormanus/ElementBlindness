@@ -24,6 +24,14 @@ public class ResourceManager : MonoBehaviour
 
     public static T Get<T>(string name) where T : Object
     {
-        return Instance._objs.FirstOrDefault(x => x.Key == name && x.Value is T) as T;
+        foreach (var kvp in Instance._objs)
+        {
+            if (kvp.Key == name && kvp.Value is T obj)
+            {
+                return obj;
+            }
+        }
+        Debug.LogWarning("Invalid key: " + name);
+        return null;
     }
 }

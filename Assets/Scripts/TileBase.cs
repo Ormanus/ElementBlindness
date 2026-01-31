@@ -16,7 +16,14 @@ public abstract class TileBase : MonoBehaviour
         BurningWood,
     }
 
-    public List<string> Tags = new();
+    public enum Tag
+    {
+        Hot,
+        Cold,
+        Water,
+    }
+
+    public List<Tag> Tags = new();
 
     public abstract void Heat();
 
