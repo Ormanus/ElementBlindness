@@ -4,7 +4,7 @@ public class TileStone : TileBase
 {
     public override void Freeze()
     {
-        Change(TileType.FrozenStone);
+        Change(TileType.ColdStone);
     }
 
     public override void Heat()

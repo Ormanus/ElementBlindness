@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class TileLava : TileLiquid
+public class TileWater : TileLiquid
 {
     private void FixedUpdate()
     {
@@ -12,11 +12,11 @@ public class TileLava : TileLiquid
 
     public override void Freeze()
     {
-        FreezeLiquid<TileLava>(TileType.HotStone);
+        FreezeLiquid<TileWater>(TileType.Ice);
     }
 
     public override void Heat()
     {
-        // Already max hot
+        Destroy(gameObject);
     }
 }
