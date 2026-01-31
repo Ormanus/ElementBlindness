@@ -28,4 +28,13 @@ public class TileWoodBurning : TileBase
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<TileWater>(out var water))
+        {
+            Freeze();
+            water.Heat();
+        }
+    }
 }

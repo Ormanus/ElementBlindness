@@ -11,4 +11,12 @@ public class TileStone : TileBase
     {
         Change(TileType.HotStone);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
+        {
+            Heat();
+        }
+    }
 }

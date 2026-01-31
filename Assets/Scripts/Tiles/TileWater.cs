@@ -24,7 +24,7 @@ public class TileWater : TileLiquid
     {
         if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
         {
-            Destroy(gameObject);
+            Heat();
         }
     }
 }

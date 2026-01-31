@@ -11,4 +11,12 @@ public class TileColdWood : TileBase
     {
         Change(TileType.Wood);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
+        {
+            Heat();
+        }
+    }
 }

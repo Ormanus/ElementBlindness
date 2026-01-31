@@ -11,4 +11,13 @@ public class TileHotStone : TileBase
     {
         ChangeToLiquid(TileType.Lava);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<TileWater>(out var water))
+        {
+            Freeze();
+            water.Heat();
+        }
+    }
 }
