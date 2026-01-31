@@ -1,0 +1,31 @@
+using UnityEngine;
+
+public class TileWoodBurning : TileBase
+{
+    float _startTime;
+    float _timer;
+
+    public override void Freeze()
+    {
+        Change(TileType.Wood);
+    }
+
+    public override void Heat()
+    {
+        // Max hot
+    }
+
+    private void Start()
+    {
+        _startTime = Time.time;
+        _timer = 3f + Random.value;
+    }
+
+    private void Update()
+    {
+        if (Time.time > _startTime + _timer)
+        {
+            Destroy(gameObject);
+        }
+    }
+}

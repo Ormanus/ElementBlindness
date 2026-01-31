@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class TileStone : TileBase
+public class TileIce : TileBase
 {
     public override void Freeze()
     {
-        Change(TileType.ColdStone);
+        // Max cold
     }
 
     public override void Heat()
     {
-        Change(TileType.HotStone);
+        Change(TileType.Water);
     }
 }
