@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class MaskController : MonoBehaviour
 {
     public static MaskController Instance;
 
-    public static Element[] availableMasks;
+    public static List<Element> availableMasks;
 
     public TileBase.Tag currentElement;
     public Image colorOverlay;

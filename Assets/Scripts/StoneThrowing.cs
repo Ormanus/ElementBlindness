@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class StoneThrowing : MonoBehaviour
 {
-    public static List<ElementStoneBase> inventory = new();
+    public static List<Element> inventory = new();
 
     public Element[] stones;
     public Image icon;

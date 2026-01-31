@@ -115,4 +115,19 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<ItemPickup>(out var item))
+        {
+            if (item.mask)
+            {
+                MaskController.availableMasks.Add(item.element);
+            }
+            else
+            {
+                StoneThrowing.inventory.Add(item.element);
+            }
+        }
+    }
 }
