@@ -34,4 +34,17 @@ public class ResourceManager : MonoBehaviour
         Debug.LogWarning("Invalid key: " + name);
         return null;
     }
+
+    //bool done = false;
+    //private void Update()
+    //{
+    //    if (!done)
+    //    {
+    //        if (Time.time > 3f)
+    //        {
+    //            done = true;
+    //            //FindFirstObjectByType<TileLava>().Freeze();
+    //        }
+    //    }
+    //}
 }

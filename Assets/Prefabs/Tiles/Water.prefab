@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8831828543450780518}
   - component: {fileID: 6009158573039989051}
   - component: {fileID: 2039376963850036039}
-  - component: {fileID: 5835343265260154245}
   - component: {fileID: 1361057462791328973}
   - component: {fileID: 1625183303427192907}
   - component: {fileID: 2220845439197387778}
+  - component: {fileID: 123210254610905504}
   m_Layer: 0
-  m_Name: Lava
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2702943276272629857, guid: e98220d6934537843acd6ebcdaa5fd0b, type: 3}
+  m_Sprite: {fileID: -8846468407950627626, guid: 0851405275de03b478aa00cc64af807b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,19 +142,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5835343265260154245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8181188595095711363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8c97cfa3c0a5440a0d882b0f2b6b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileLava
-  Tags: 00000000
 --- !u!114 &1361057462791328973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileAnimation
   sprites:
-  - {fileID: 2702943276272629857, guid: e98220d6934537843acd6ebcdaa5fd0b, type: 3}
-  - {fileID: 8609141240632667477, guid: e9318f85184601e459f13e4e1a149a30, type: 3}
+  - {fileID: -8846468407950627626, guid: 0851405275de03b478aa00cc64af807b, type: 3}
+  - {fileID: 1303734444375958151, guid: 9ed7c2bf55bfe1a409bd2a689e50d3e1, type: 3}
 --- !u!58 &1625183303427192907
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -233,3 +220,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &123210254610905504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181188595095711363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37995baa621f15548887695e4f5ac902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileWater
+  Tags: 02000000
