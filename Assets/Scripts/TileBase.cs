@@ -12,6 +12,7 @@ public abstract class TileBase : MonoBehaviour
         Lava,
         FrozenStone,
         FrozenWood,
+        HotStone,
         BurningWood,
     }
 
