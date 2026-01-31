@@ -94,7 +94,6 @@ public class Player : MonoBehaviour
             if (IsGrounded())
             {
                 jumping = false;
-                Debug.Log("GROUNDED");
             }
         }
 
@@ -111,7 +110,6 @@ public class Player : MonoBehaviour
                 jumping = true;
                 jumpButtonReleased = false;
                 rb.linearVelocityY = jumpSpeed;
-                Debug.Log("JUMP");
             }
         }
     }

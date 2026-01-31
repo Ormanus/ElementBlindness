@@ -11,13 +11,14 @@ public class MaskController : MonoBehaviour
     public TileBase.Tag currentElement;
     public Image colorOverlay;
 
-    const int layerPlayer = 7;
+    const int layerPlayer = 2; // Ignore Raycast
     const int layerHot = 8;
     const int layerCold = 9;
 
     private void Awake()
     {
         Instance = this;
+        currentElement = TileBase.Tag.None;
     }
 
     public void ApplyMask(Element element)
