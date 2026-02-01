@@ -15,6 +15,9 @@ namespace Outloud.Common
 
         public AudioSelection[] AudioList;
         public AudioSource Source;
+        
+        static Dictionary<string, float> lastShots = new Dictionary<string, float>();
+        const float audioThreshold = 0.15f;
 
         List<GameObject> loops = new List<GameObject>();
 
@@ -58,13 +61,25 @@ namespace Outloud.Common
         {
             var clip = GetClip(ID);
             if (clip != null)
+            {
                 Instance.Source.PlayOneShot(clip);
+            }
         }
 
         public static void PlaySound(AudioClip clip)
         {
             if (clip != null)
-                Instance.Source.PlayOneShot(clip);
+            {
+                if (lastShots.ContainsKey(clip.name) && lastShots[clip.name] > Time.realtimeSinceStartup - audioThreshold )
+                {
+
+                }
+                else
+                {
+                    lastShots[clip.name] = Time.realtimeSinceStartup;
+                    Instance.Source.PlayOneShot(clip);
+                }
+            }
         }
 
         static AudioClip GetClip(string ID)
