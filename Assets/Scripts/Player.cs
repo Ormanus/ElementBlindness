@@ -120,12 +120,13 @@ public class Player : MonoBehaviour
         {
             if (item.mask)
             {
-                MaskController.availableMasks.Add(item.element);
+                MaskController.AddMask(item.element);
             }
             else
             {
                 StoneThrowing.inventory.Add(item.element);
             }
+            Destroy(collision.gameObject);
         }
     }
 }
