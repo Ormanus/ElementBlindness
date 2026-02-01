@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   element: {fileID: 11400000, guid: 45cc76c449a23fd49afe2a63e29c89dd, type: 2}
   mask: 1
+  collectSound: {fileID: 8300000, guid: 512184beaabec9241a66dd318fdaa933, type: 3}
 --- !u!212 &5708755928144319817
 SpriteRenderer:
   serializedVersion: 2

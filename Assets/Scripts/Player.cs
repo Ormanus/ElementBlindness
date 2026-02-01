@@ -142,6 +142,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<ItemPickup>(out var item))
         {
+            Outloud.Common.AudioManager.PlaySound(item.collectSound);
             if (item.mask)
             {
                 MaskController.AddMask(item.element);
