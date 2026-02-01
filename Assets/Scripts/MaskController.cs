@@ -35,6 +35,12 @@ public class MaskController : MonoBehaviour
         UpdateMaskSelection();
     }
 
+    private void Start()
+    {
+        // Ensure physics settings are correct at start
+        UpdateMaskEffect();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -85,7 +91,7 @@ public class MaskController : MonoBehaviour
         }
     }
 
-    void UpdateMaskSelection()
+    public void UpdateMaskSelection()
     {
         _index %= availableMasks.Count;
         foreach (var icon in _maskIcons)

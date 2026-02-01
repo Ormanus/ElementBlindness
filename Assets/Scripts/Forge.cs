@@ -99,6 +99,7 @@ public class Forge : MonoBehaviour
                     }
 
                     StoneThrowing.Instance.UpdateIcons();
+                    MaskController.Instance.UpdateMaskSelection();
                 }
 
             }
