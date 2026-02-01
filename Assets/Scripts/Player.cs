@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -82,6 +83,14 @@ public class Player : MonoBehaviour
         sr.sprite = sprites[spriteIndex];
     }
 
+    void CheckFalling()
+    {
+        if (transform.position.y < -10)
+        {
+            Die();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -98,6 +107,7 @@ public class Player : MonoBehaviour
         }
 
         HandleSprites();
+        CheckFalling();
     }
 
     void FixedUpdate()
@@ -127,6 +137,24 @@ public class Player : MonoBehaviour
                 StoneThrowing.AddStone(item.element);
             }
             Destroy(collision.gameObject);
+        }
+
+        if (MaskController.Instance.currentElement != TileBase.Tag.Hot)
+        {
+            if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
+            {
+                Die();
+            }
+        }
+    }
+
+    void Die()
+    {
+        DeathCanvas deathCanvas = FindFirstObjectByType<DeathCanvas>(FindObjectsInactive.Include);
+        if (deathCanvas != null)
+        {
+            deathCanvas.gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
