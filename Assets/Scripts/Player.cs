@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public float spriteFPS = 6;
 
+    public AudioClip hotDeathSound;
+
     enum PlayerState
     {
         Idle, 
@@ -155,6 +157,7 @@ public class Player : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent<TileLava>(out var lava))
             {
+                Outloud.Common.AudioManager.PlaySound(hotDeathSound);
                 Die();
             }
         }

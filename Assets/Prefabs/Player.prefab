@@ -60,6 +60,7 @@ MonoBehaviour:
   JumpingSprites:
   - {fileID: -6781412095145881161, guid: e192fa07ab3d7a346872e2b88a3d439f, type: 3}
   spriteFPS: 6
+  hotDeathSound: {fileID: 8300000, guid: 44d94d68a9b336a49aab48e9a9d45407, type: 3}
 --- !u!212 &8435581935499197515
 SpriteRenderer:
   serializedVersion: 2
