@@ -68,7 +68,10 @@ public class MaskController : MonoBehaviour
         {
             StartCoroutine(MaskOnAnim(element));
         }
+    }
 
+    void UpdateMaskEffect()
+    {
         Physics2D.IgnoreLayerCollision(layerPlayer, layerHot, currentElement == TileBase.Tag.Hot);
         Physics2D.IgnoreLayerCollision(layerPlayer, layerCold, currentElement == TileBase.Tag.Cold);
 
@@ -140,6 +143,7 @@ public class MaskController : MonoBehaviour
             sr.color = Color.Lerp(startColor, endColor, Easing.EaseOut(t));
             yield return null;
         }
+        UpdateMaskEffect();
 
         animMask.gameObject.SetActive(false);
     }
@@ -169,6 +173,8 @@ public class MaskController : MonoBehaviour
             sr.color = Color.Lerp(startColor, endColor, Easing.EaseOut(t));
             yield return null;
         }
+        currentElement = TileBase.Tag.None;
+        UpdateMaskEffect();
         animMask.gameObject.SetActive(false);
     }
 }
