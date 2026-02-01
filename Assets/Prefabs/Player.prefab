@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2591325628211255631}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,11 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345f9629737028f40931838ce15a3006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoneThrowing
-  stones:
-  - {fileID: 11400000, guid: 78a48bf56b28a594195ffcaaefea4c3b, type: 2}
-  - {fileID: 11400000, guid: 78a48bf56b28a594195ffcaaefea4c3b, type: 2}
-  - {fileID: 11400000, guid: 45cc76c449a23fd49afe2a63e29c89dd, type: 2}
-  - {fileID: 11400000, guid: b865c643a72168f428b2ed791a02cce6, type: 2}
+  stones: []
   aimLine: {fileID: 0}
   stoneIconPrefab: {fileID: 570156431423286086, guid: f82f9b8fbb3fc9844be27a36a8127634, type: 3}
   inventoryParent: {fileID: 0}
