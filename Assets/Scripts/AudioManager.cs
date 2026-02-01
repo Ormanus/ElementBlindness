@@ -18,37 +18,58 @@ namespace Outloud.Common
 
         List<GameObject> loops = new List<GameObject>();
 
-        static AudioManager instance;
+        static AudioManager _instance;
+        static AudioManager Instance
+        {
+            get
+            {
+                if (_instance == null || !_instance)
+                {
+                    _instance = FindFirstObjectByType<AudioManager>();
+                    if (_instance == null)
+                    {
+                        var go = new GameObject("AudioManager");
+                        _instance = go.AddComponent<AudioManager>();
+                    }
+                }
+
+                return _instance;
+            }
+            set => _instance = value;
+        }
 
         private void Awake()
         {
-            if (instance != null && instance)
-                Destroy(instance);
+            if (Instance != null)
+            {
+                if (Instance && Instance != this)
+                    Destroy(Instance);
+            }
 
-            instance = this;
+            Instance = this;
         }
 
         public static bool Exists
         {
-            get => instance != null && instance;
+            get => Instance != null && Instance;
         }
 
         public static void PlaySound(string ID)
         {
             var clip = GetClip(ID);
             if (clip != null)
-                instance.Source.PlayOneShot(clip);
+                Instance.Source.PlayOneShot(clip);
         }
 
         public static void PlaySound(AudioClip clip)
         {
             if (clip != null)
-                instance.Source.PlayOneShot(clip);
+                Instance.Source.PlayOneShot(clip);
         }
 
         static AudioClip GetClip(string ID)
         {
-            foreach (var item in instance.AudioList)
+            foreach (var item in Instance.AudioList)
             {
                 if (item.audioID.Equals(ID, System.StringComparison.CurrentCultureIgnoreCase))
                 {
@@ -70,17 +91,17 @@ namespace Outloud.Common
                 source.loop = true;
                 source.clip = clip;
                 source.Play();
-                instance.loops.Add(go);
+                Instance.loops.Add(go);
             }
         }
 
         public static void StopLoop(string ID)
         {
-            foreach (var loop in instance.loops)
+            foreach (var loop in Instance.loops)
             {
                 if (loop.name == ID)
                 {
-                    instance.loops.Remove(loop);
+                    Instance.loops.Remove(loop);
                     Destroy(loop);
                     return;
                 }
@@ -89,11 +110,11 @@ namespace Outloud.Common
 
         public static void StopAllLoops()
         {
-            foreach (var loop in instance.loops)
+            foreach (var loop in Instance.loops)
             {
                 Destroy(loop);
             }
-            instance.loops.Clear();
+            Instance.loops.Clear();
         }
     }
 }
