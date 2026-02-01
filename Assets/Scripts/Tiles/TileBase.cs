@@ -56,7 +56,7 @@ public abstract class TileBase : MonoBehaviour
     {
         if (_destroyed) return;
         _destroyed = true;
-        SpawnTile(type, transform.position, transform.rotation);
+        SpawnTile(type, transform);
         Destroy(gameObject);
     }
 
@@ -68,11 +68,14 @@ public abstract class TileBase : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public static void SpawnTile(TileType type, Vector2 position, Quaternion rotation)
+    public static void SpawnTile(TileType type, Transform tr)
     {
         var newTile = ResourceManager.Get<GameObject>(type.ToString());
         if (newTile != null)
-            Instantiate(newTile, position, rotation, null);
+        {
+            var obj = Instantiate(newTile, tr.position, tr.rotation, null);
+            obj.transform.localScale = tr.localScale;
+        }
     }
 
     public static void SpawnLiquid(TileType type, Vector2 position)
