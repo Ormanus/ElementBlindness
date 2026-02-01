@@ -30,9 +30,12 @@ public class MaskController : MonoBehaviour
         currentElement = TileBase.Tag.None;
         availableMasks = new();
         availableMasks.Add(null); // No mask
-        animMask.gameObject.SetActive(false);
+        if (animMask  != null )
+        {
+            animMask.gameObject.SetActive(false);
+            UpdateMaskSelection();
+        }
 
-        UpdateMaskSelection();
     }
 
     private void Start()
