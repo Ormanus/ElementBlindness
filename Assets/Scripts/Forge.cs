@@ -23,6 +23,10 @@ public class Forge : MonoBehaviour
         {
             stoneMaterials[i].enabled = false;
         }
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     private void Update()
@@ -57,7 +61,8 @@ public class Forge : MonoBehaviour
 
                 if (_availableElements.Count == 0)
                 {
-                    craftPrompt.enabled = false;
+                    craftPrompt.enabled = true;
+                    craftPrompt.text = "Not enough materials";
                     for (int i = 0; i < stoneMaterials.Length; i++)
                     {
                         stoneMaterials[i].enabled = false;
@@ -84,19 +89,14 @@ public class Forge : MonoBehaviour
                     }
                     MaskController.availableMasks.Add(selectedElement);
 
-                    _availableElements.Clear();
-                    foreach (var item in StoneThrowing.inventory)
+                    IsInUse = false;
+                    craftPrompt.enabled = false;
+                    usePrompt.enabled = false;
+                    for (int i = 0; i < stoneMaterials.Length; i++)
                     {
-                        if (StoneThrowing.inventory.FindAll(e => e == item).Count >= 3 && !_availableElements.Contains(item))
-                        {
-                            _availableElements.Add(item);
-                        }
+                        stoneMaterials[i].enabled = false;
                     }
-                    if (_currentIndex >= _availableElements.Count)
-                    {
-                        _currentIndex = 0;
-                    }
-                    UpdateCraftDisplay();
+
                     StoneThrowing.Instance.UpdateIcons();
                 }
 
@@ -127,6 +127,7 @@ public class Forge : MonoBehaviour
             stoneMaterials[i].sprite = element.Icon;
         }
         craftPrompt.enabled = true;
+        craftPrompt.text = "Forge: F";
     }
 
 }

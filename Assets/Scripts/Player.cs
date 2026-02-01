@@ -91,9 +91,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        if (Forge.IsInUse)
+        {
+            xSpeed = 0;
+            jumpButtonPressed = false;
+            HandleSprites();
+            return;
+        }
         xSpeed = Input.GetAxis("Horizontal");
         jumpButtonPressed = Input.GetButton("Jump");
 
@@ -153,6 +160,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Goal>(out var goal))
+        {
+            goal.Enter();
+        }
+    }
+
     void Die()
     {
         DeathCanvas deathCanvas = FindFirstObjectByType<DeathCanvas>(FindObjectsInactive.Include);
@@ -160,6 +175,8 @@ public class Player : MonoBehaviour
         {
             deathCanvas.gameObject.SetActive(true);
             gameObject.SetActive(false);
+            MaskController.availableMasks.Clear();
+            StoneThrowing.inventory.Clear();
         }
     }
 }
