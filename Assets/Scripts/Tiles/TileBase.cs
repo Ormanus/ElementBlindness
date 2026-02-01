@@ -31,6 +31,8 @@ public abstract class TileBase : MonoBehaviour
 
     public abstract void Freeze();
 
+    bool _destroyed = false;
+
     public void SetVisible(bool visible)
     {
         var renderers = GetComponentsInChildren<Renderer>();
@@ -40,7 +42,7 @@ public abstract class TileBase : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    protected virtual void Start()
     {
         if (Tags.Contains(MaskController.Instance.currentElement))
         {
@@ -50,21 +52,25 @@ public abstract class TileBase : MonoBehaviour
 
     public void Change(TileType type)
     {
-        SpawnTile(type, transform.position);
+        if (_destroyed) return;
+        _destroyed = true;
+        SpawnTile(type, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
     public void ChangeToLiquid(TileType type)
     {
+        if (_destroyed) return;
+        _destroyed = true;
         SpawnLiquid(type, transform.position);
         Destroy(gameObject);
     }
 
-    public static void SpawnTile(TileType type, Vector2 position)
+    public static void SpawnTile(TileType type, Vector2 position, Quaternion rotation)
     {
         var newTile = ResourceManager.Get<GameObject>(type.ToString());
         if (newTile != null)
-            Instantiate(newTile, position, Quaternion.identity, null);
+            Instantiate(newTile, position, rotation, null);
     }
 
     public static void SpawnLiquid(TileType type, Vector2 position)

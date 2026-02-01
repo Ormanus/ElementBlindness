@@ -15,8 +15,9 @@ public class TileWoodBurning : TileBase
         // Max hot
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _startTime = Time.time;
         _timer = 3f + Random.value;
     }

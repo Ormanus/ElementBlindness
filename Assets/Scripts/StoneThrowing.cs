@@ -61,7 +61,7 @@ public class StoneThrowing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _index = (_index + 1) % stones.Length;
+            _index = (_index + 1) % inventory.Count;
             UpdateIcons();
         }
 
