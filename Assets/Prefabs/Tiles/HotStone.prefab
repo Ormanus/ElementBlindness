@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileHotStone
   Tags: 00000000
+  FreezingSound: {fileID: 8300000, guid: b249e8f7fa0030a48a5b96b38a530dfa, type: 3}
+  HeatingSound: {fileID: 8300000, guid: 44d94d68a9b336a49aab48e9a9d45407, type: 3}
 --- !u!212 &3171493421584993095
 SpriteRenderer:
   serializedVersion: 2

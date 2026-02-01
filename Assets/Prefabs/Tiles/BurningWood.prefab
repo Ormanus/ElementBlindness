@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileWoodBurning
   Tags: 00000000
+  FreezingSound: {fileID: 0}
+  HeatingSound: {fileID: 0}
 --- !u!1 &7377009931485376028
 GameObject:
   m_ObjectHideFlags: 0

@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileLava
   Tags: 00000000
+  FreezingSound: {fileID: 8300000, guid: b249e8f7fa0030a48a5b96b38a530dfa, type: 3}
+  HeatingSound: {fileID: 0}
 --- !u!114 &1361057462791328973
 MonoBehaviour:
   m_ObjectHideFlags: 0

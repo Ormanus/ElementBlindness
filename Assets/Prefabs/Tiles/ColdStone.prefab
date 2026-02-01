@@ -244,3 +244,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileColdStone
   Tags: 01000000
+  FreezingSound: {fileID: 0}
+  HeatingSound: {fileID: 8300000, guid: b249e8f7fa0030a48a5b96b38a530dfa, type: 3}

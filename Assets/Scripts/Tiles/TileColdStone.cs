@@ -9,6 +9,7 @@ public class TileColdStone : TileBase
 
     public override void Heat()
     {
+        Outloud.Common.AudioManager.PlaySound(HeatingSound);
         Change(TileType.Stone);
     }
 

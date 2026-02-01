@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileIce
   Tags: 01000000
+  FreezingSound: {fileID: 0}
+  HeatingSound: {fileID: 8300000, guid: 2f921f045a35ba54ba152ec68ac2020e, type: 3}

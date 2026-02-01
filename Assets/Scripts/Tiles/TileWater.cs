@@ -12,11 +12,13 @@ public class TileWater : TileLiquid
 
     public override void Freeze()
     {
+        Outloud.Common.AudioManager.PlaySound(FreezingSound);
         FreezeLiquid<TileWater>(TileType.Ice);
     }
 
     public override void Heat()
     {
+        Outloud.Common.AudioManager.PlaySound(HeatingSound);
         Destroy(gameObject);
     }
 

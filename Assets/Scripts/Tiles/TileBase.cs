@@ -26,6 +26,8 @@ public abstract class TileBase : MonoBehaviour
     }
 
     public List<Tag> Tags = new();
+    public AudioClip FreezingSound;
+    public AudioClip HeatingSound;
 
     public abstract void Heat();
 

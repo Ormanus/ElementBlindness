@@ -12,6 +12,7 @@ public class TileLava : TileLiquid
 
     public override void Freeze()
     {
+        Outloud.Common.AudioManager.PlaySound(FreezingSound);
         FreezeLiquid<TileLava>(TileType.HotStone);
     }
 

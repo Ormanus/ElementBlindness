@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TileWood
   Tags: 
+  FreezingSound: {fileID: 8300000, guid: b249e8f7fa0030a48a5b96b38a530dfa, type: 3}
+  HeatingSound: {fileID: 8300000, guid: 3fe57c893bc0b4546b8d90bc6e0910ee, type: 3}

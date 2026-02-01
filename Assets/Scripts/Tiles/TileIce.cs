@@ -9,6 +9,7 @@ public class TileIce : TileBase
 
     public override void Heat()
     {
+        Outloud.Common.AudioManager.PlaySound(HeatingSound);
         ChangeToLiquid(TileType.Water);
     }
 
