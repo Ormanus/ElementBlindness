@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc598b5809cc6c4099171019da03cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  speed: 10
-  jumpSpeed: 7
+  speed: 40
+  jumpSpeed: 11
   IdleSprites:
   - {fileID: 4334783836991956000, guid: e192fa07ab3d7a346872e2b88a3d439f, type: 3}
   RunningSprites:
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

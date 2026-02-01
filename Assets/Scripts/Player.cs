@@ -112,6 +112,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        const float dampingLimit = 40f;
+        float vdir = Mathf.Sign(rb.linearVelocityX);
+        float dampingAmount = Mathf.Min(dampingLimit, Mathf.Abs(rb.linearVelocityX) * 8f);
+        rb.AddForce(new Vector2(-vdir * dampingAmount, 0));
+
         rb.AddForce(new Vector2(xSpeed * speed, 0));
         if (jumpButtonPressed && jumpButtonReleased)
         {
