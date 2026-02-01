@@ -91,7 +91,7 @@ public class MaskController : MonoBehaviour
         for (int i = 0; i < availableMasks.Count; i++)
         {
             var icon = Instantiate(maskIconPrefab, masksParent);
-            float size = i == 0 ? 60 : 50; // Highlight the selected mask
+            float size = i == 0 ? 80 : 50; // Highlight the selected mask
             icon.GetComponent<RectTransform>().sizeDelta = new Vector2(size, size);
             int index = (i + _index) % availableMasks.Count;
             if (availableMasks[index] == null)
@@ -134,10 +134,10 @@ public class MaskController : MonoBehaviour
         while (t < 1f)
         {
             t += Time.deltaTime * 1.5f;
-            animMask.position = Vector3.Lerp(startpos, endpos, EaseOut(t));
+            animMask.position = Vector3.Lerp(startpos, endpos, Easing.EaseOut(t));
 
-            colorOverlay.color = Color.Lerp(endColor, startColor, EaseOut(t));
-            sr.color = Color.Lerp(startColor, endColor, EaseOut(t));
+            colorOverlay.color = Color.Lerp(endColor, startColor, Easing.EaseOut(t));
+            sr.color = Color.Lerp(startColor, endColor, Easing.EaseOut(t));
             yield return null;
         }
 
@@ -164,21 +164,11 @@ public class MaskController : MonoBehaviour
         while (t < 1f)
         {
             t += Time.deltaTime * 2f;
-            animMask.position = Vector3.Lerp(startpos, endpos, EaseOut(t));
-            colorOverlay.color = Color.Lerp(overlayStart, startColor, EaseOut(t));
-            sr.color = Color.Lerp(startColor, endColor, EaseOut(t));
+            animMask.position = Vector3.Lerp(startpos, endpos, Easing.EaseOut(t));
+            colorOverlay.color = Color.Lerp(overlayStart, startColor, Easing.EaseOut(t));
+            sr.color = Color.Lerp(startColor, endColor, Easing.EaseOut(t));
             yield return null;
         }
         animMask.gameObject.SetActive(false);
-    }
-
-    float EaseIn(float t)
-    {
-        return Mathf.Pow(t, 3);
-    }
-
-    float EaseOut(float t)
-    {
-        return 1f - Mathf.Pow(1f - t, 3);
     }
 }

@@ -43,7 +43,7 @@ public class StoneThrowing : MonoBehaviour
         for (int i = 0; i < inventory.Count; i++)
         {
             var icon = Instantiate(stoneIconPrefab, inventoryParent);
-            float size = i == 0 ? 60 : 50; // Highlight the selected stone
+            float size = i == 0 ? 80 : 50; // Highlight the selected stone
             icon.GetComponent<RectTransform>().sizeDelta = new Vector2(size, size);
             int index = (i + _index) % inventory.Count;
             icon.GetComponent<Image>().sprite = inventory[index].Icon;
@@ -61,7 +61,7 @@ public class StoneThrowing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _index = (_index + 1) % stones.Length;
+            _index = (_index + 1) % inventory.Count;
             UpdateIcons();
         }
 
