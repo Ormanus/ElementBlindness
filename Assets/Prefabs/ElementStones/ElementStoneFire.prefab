@@ -170,3 +170,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoneFire
   ElementObject: {fileID: 11400000, guid: 78a48bf56b28a594195ffcaaefea4c3b, type: 2}
+  throwSound: {fileID: 8300000, guid: a6c96817919ebd742b89413ddd6314ef, type: 3}
+  crashSound: {fileID: 8300000, guid: 762ac3854b50ac44aa9951facf18d4ea, type: 3}

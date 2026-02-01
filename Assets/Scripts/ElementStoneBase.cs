@@ -3,7 +3,14 @@ using UnityEngine;
 public class ElementStoneBase : MonoBehaviour
 {
     public Element ElementObject;
+    public AudioClip throwSound;
+    public AudioClip crashSound;
     bool _collided = false;
+
+    private void OnEnable()
+    {
+        Outloud.Common.AudioManager.PlaySound(throwSound);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -11,6 +18,7 @@ public class ElementStoneBase : MonoBehaviour
             return;
         if (collision.gameObject.TryGetComponent<TileBase>(out var tile))
         {
+            Outloud.Common.AudioManager.PlaySound(crashSound);
             _collided = true;
             Effect(tile);
         }

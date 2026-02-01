@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StoneWater
   ElementObject: {fileID: 11400000, guid: c0a62b9c2c1024c44b66f985a3b77891, type: 2}
+  throwSound: {fileID: 8300000, guid: a6c96817919ebd742b89413ddd6314ef, type: 3}
+  crashSound: {fileID: 8300000, guid: 762ac3854b50ac44aa9951facf18d4ea, type: 3}
 --- !u!212 &9192523219065338768
 SpriteRenderer:
   serializedVersion: 2
