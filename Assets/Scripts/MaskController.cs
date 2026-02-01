@@ -14,6 +14,7 @@ public class MaskController : MonoBehaviour
     public Transform animMask;
     public GameObject maskIconPrefab;
     public Transform masksParent;
+    public AudioClip maskSound;
 
     const int layerPlayer = 2; // Ignore Raycast
     const int layerHot = 8;
@@ -66,6 +67,7 @@ public class MaskController : MonoBehaviour
         }
         else
         {
+            Outloud.Common.AudioManager.PlaySound(maskSound);
             StartCoroutine(MaskOnAnim(element));
         }
     }

@@ -766,6 +766,7 @@ MonoBehaviour:
   animMask: {fileID: 816565665342893904}
   maskIconPrefab: {fileID: 8979295291880586490, guid: 09d176306a358d8468df559fcd5e6374, type: 3}
   masksParent: {fileID: 8354472952620233370}
+  maskSound: {fileID: 8300000, guid: 2dcc1f2b5ef9fde42bce2e355aef9d8c, type: 3}
 --- !u!1001 &990583013245759159
 PrefabInstance:
   m_ObjectHideFlags: 0
