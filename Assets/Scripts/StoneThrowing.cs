@@ -13,6 +13,7 @@ public class StoneThrowing : MonoBehaviour
     public LineRenderer aimLine;
     public GameObject stoneIconPrefab;
     public RectTransform inventoryParent;
+    public AudioClip switchSound;
 
     int _index = 0;
     bool _aiming = false;
@@ -61,6 +62,7 @@ public class StoneThrowing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Outloud.Common.AudioManager.PlaySound(switchSound);
             if (inventory.Count == 0)
                 return;
             _index = (_index + 1) % inventory.Count;

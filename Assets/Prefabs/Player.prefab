@@ -199,3 +199,4 @@ MonoBehaviour:
   aimLine: {fileID: 0}
   stoneIconPrefab: {fileID: 570156431423286086, guid: f82f9b8fbb3fc9844be27a36a8127634, type: 3}
   inventoryParent: {fileID: 0}
+  switchSound: {fileID: 8300000, guid: a9ca9779c605bdb438985dbd2c9cf019, type: 3}
