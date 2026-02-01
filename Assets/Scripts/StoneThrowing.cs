@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StoneThrowing : MonoBehaviour
 {
+    public static StoneThrowing Instance;
+
     public static List<Element> inventory = new();
 
     public Element[] stones;
@@ -18,13 +21,14 @@ public class StoneThrowing : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         aimLine.positionCount = 15;
         aimLine.enabled = false;
         inventory.AddRange(stones);
         UpdateIcons();
     }
 
-    void UpdateIcons()
+    public void UpdateIcons()
     {
         if (inventory.Count == 0)
             _index = 0;
@@ -47,10 +51,10 @@ public class StoneThrowing : MonoBehaviour
         }
     }
 
-    public void AddStone(Element element)
+    public static void AddStone(Element element)
     {
         inventory.Add(element);
-        UpdateIcons();
+        Instance.UpdateIcons();
     }
 
     private void Update()

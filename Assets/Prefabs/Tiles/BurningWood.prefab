@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3171493421584993095}
   - component: {fileID: 136543427572812020}
   - component: {fileID: 2908565955654313482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BurningWood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

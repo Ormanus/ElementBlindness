@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                StoneThrowing.inventory.Add(item.element);
+                StoneThrowing.AddStone(item.element);
             }
             Destroy(collision.gameObject);
         }

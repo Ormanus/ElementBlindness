@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6894429382709713327}
   - component: {fileID: 3171493421584993095}
   - component: {fileID: 136543427572812020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HotStone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

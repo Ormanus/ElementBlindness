@@ -9,13 +9,10 @@ public class ElementStoneBase : MonoBehaviour
     {
         if (_collided)
             return;
-        if (collision.gameObject.layer is 0 or 4) // Default or Water
+        if (collision.gameObject.TryGetComponent<TileBase>(out var tile))
         {
-            if (collision.gameObject.TryGetComponent<TileBase>(out var tile))
-            {
-                _collided = true;
-                Effect(tile);
-            }
+            _collided = true;
+            Effect(tile);
         }
     }
 
