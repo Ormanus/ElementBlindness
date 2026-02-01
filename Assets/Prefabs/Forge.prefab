@@ -208,6 +208,7 @@ MonoBehaviour:
   - {fileID: 2821728578465697284}
   - {fileID: 596768948089794773}
   - {fileID: 4548714709094562495}
+  forgeSound: {fileID: 8300000, guid: 3cdc321130b4ecd43af8c32ba656a2ce, type: 3}
 --- !u!1 &6278642313507516606
 GameObject:
   m_ObjectHideFlags: 0

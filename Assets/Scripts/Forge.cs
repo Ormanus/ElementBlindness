@@ -10,6 +10,7 @@ public class Forge : MonoBehaviour
     public TMPro.TextMeshPro craftPrompt;
     public float interactionDistance = 2.0f;
     public SpriteRenderer[] stoneMaterials;
+    public AudioClip forgeSound;
 
     int _currentIndex = 0;
     List<Element> _availableElements = new();
@@ -88,7 +89,7 @@ public class Forge : MonoBehaviour
                         StoneThrowing.inventory.Remove(selectedElement);
                     }
                     MaskController.availableMasks.Add(selectedElement);
-
+                    Outloud.Common.AudioManager.PlaySound(forgeSound);
                     IsInUse = false;
                     craftPrompt.enabled = false;
                     usePrompt.enabled = false;
